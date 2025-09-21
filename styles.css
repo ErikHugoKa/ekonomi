@@ -1,13 +1,12 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 20px;
-  padding: 0;
-  background-color: #f9f9f9;
+  margin: 40px;
+  background: #fafafa;
   color: #333;
 }
 
 h1 {
-  color: #0066cc;
+  color: #0056d6;
 }
 
 .input-group {
@@ -19,19 +18,26 @@ label {
   margin-bottom: 5px;
 }
 
-input {
+input[type="number"] {
   padding: 8px;
-  width: 200px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 button {
-  padding: 10px 15px;
-  background-color: #0066cc;
+  padding: 10px 20px;
+  background-color: #0056d6;
   color: white;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #004999;
+  background-color: #003c99;
+}
+
+h2 {
+  margin-top: 30px;
 }
