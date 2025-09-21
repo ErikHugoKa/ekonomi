@@ -1,20 +1,43 @@
-function calcSparande() {
-  const startkapital = parseFloat(document.getElementById("startkapital").value);
-  const sparande = parseFloat(document.getElementById("sparande").value);
-  const ranta = parseFloat(document.getElementById("ranta").value) / 100;
-  const ar = parseFloat(document.getElementById("ar").value);
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background: #fafafa;
+  color: #333;
+}
 
-  let kapital = startkapital;
-  let totalSkatt = 0;
+h1 {
+  color: #0056d6;
+}
 
-  for (let i = 1; i <= ar; i++) {
-    kapital += sparande * 12;
-    let avkastning = kapital * ranta;
-    let skatt = avkastning * 0.30; // 30% skatt på avkastning
-    kapital += avkastning - skatt;
-    totalSkatt += skatt;
-  }
+.input-group {
+  margin-bottom: 15px;
+}
 
-  document.getElementById("sparResult").textContent = kapital.toFixed(2) + " kr";
-  document.getElementById("skattResult").textContent = totalSkatt.toFixed(2) + " kr";
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="number"] {
+  padding: 8px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #0056d6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #003c99;
+}
+
+h2 {
+  margin-top: 30px;
 }
